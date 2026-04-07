@@ -1,5 +1,5 @@
-## Copyright (c) HashiCorp, Inc.
-## SPDX-License-Identifier: MPL-2.0
+# Copyright IBM Corp. 2018, 2026
+# SPDX-License-Identifier: MPL-2.0
 
 output "ssh_host1_creds_path" {
   description = "Command to read credentials for SSH Host 1"

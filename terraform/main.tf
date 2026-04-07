@@ -1,5 +1,5 @@
-## Copyright (c) HashiCorp, Inc.
-## SPDX-License-Identifier: MPL-2.0
+# Copyright IBM Corp. 2018, 2026
+# SPDX-License-Identifier: MPL-2.0
 
 # Docker image for RHEL with SSH
 resource "docker_image" "rhel_ssh" {
