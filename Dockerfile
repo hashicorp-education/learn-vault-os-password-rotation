@@ -16,7 +16,7 @@ RUN arr=("danielle" "oliver") && \
 for i in "${arr[@]}"; do \
     user="$i"; \
     useradd -m -g users $user; \
-    echo "$user:bar" | chpasswd; \
+    echo "$user:YnkXV/6g1+Bd7fKKjfM07g==" | chpasswd; \
     echo "$user ALL=NOPASSWD:/usr/sbin/chpasswd" > "/etc/sudoers.d/$user"; \
 done
 

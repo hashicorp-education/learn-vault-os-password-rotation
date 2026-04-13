@@ -35,8 +35,9 @@ EOF
 # Create password policy named "os-policy"
 vault write sys/policies/password/os-policy policy=@/tmp/password_policy.hcl
 # Write the configuration
-vault write "${PLUGIN_PATH}/config" \
-   ssh_host_key_trust_on_first_use=true
+vault write "${PLUGIN_PATH}/config" 
+# \
+#    ssh_host_key_trust_on_first_use=true
 
 vault read "${PLUGIN_PATH}/config"
 
@@ -55,7 +56,7 @@ for i in {1..2}; do
    # Create an account and configure auto rotation every minute
    vault write "${PLUGIN_PATH}/hosts/${HOST}/accounts/${USER}" \
       username="${USER}" \
-      password="bar" \
+      password="YnkXV/6g1+Bd7fKKjfM07g==" \
       password_policy="os-policy" \
       rotation_period="1m"
 

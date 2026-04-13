@@ -53,7 +53,7 @@ clean:
    @echo ">> running $0"
    docker stop $(docker ps -aq --filter name=ssh-host) || true
    docker rm $(docker ps -aq --filter name=ssh-host) || true
-   docker image rm ssh-image || true
+   docker image rm ssh-host || true
    pkill -f vault || true
    rm -rf vault-data/*
    rm -rf plugins/.cache
