@@ -35,7 +35,7 @@ EOF
 # Create password policy named "os-policy"
 vault write sys/policies/password/os-policy policy=@/tmp/password_policy.hcl
 # Write the configuration
-vault write -f "${PLUGIN_PATH}/config" \
+vault write "${PLUGIN_PATH}/config" \
    ssh_host_key_trust_on_first_use=true
 
 vault read "${PLUGIN_PATH}/config"
@@ -64,7 +64,7 @@ for i in {1..2}; do
    vault read "${PLUGIN_PATH}/hosts/${HOST}/accounts/${USER}/creds"
 
    # Perform a rotation
-   # vault write -f "${PLUGIN_PATH}/hosts/${HOST}/accounts/${USER}/rotate"
+   # vault write "${PLUGIN_PATH}/hosts/${HOST}/accounts/${USER}/rotate"
    # vault read "${PLUGIN_PATH}/hosts/${HOST}/accounts/${USER}/versions"
    # vault read "${PLUGIN_PATH}/hosts/${HOST}/accounts/${USER}/creds"
 
